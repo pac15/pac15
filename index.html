@@ -172,7 +172,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#keynote" class="portfolio-link" data-toggle="modal">
+                    <a href="#keynote1" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
@@ -183,7 +183,7 @@
                         </div>
                     </a>
                     <div class="portfolio-caption">
-                        <h4>Keynote</h4>
+                        <h4>Keynote e Ospiti</h4>
                         <p class="text-muted"></p>
                     </div>
                 </div>
@@ -869,13 +869,17 @@
             <div class="col-lg-12 text-center">
                 <h2 class="section-heading">Parlano di Noi</h2>
                 
-                <div class="col-md-6 col-sm-6">
-                    <h2 class="section-subheading text-muted">LaSicilia</h2>
+                <div class="col-md-4 col-sm-6">
+                    <h4 class="section-subheading text-muted">LaSicilia</h4>
                     <img src="img/giornali/lasicilia.jpg" class="img-responsive img-centered" alt="">
                 </div>
-                <div class="col-md-6 col-sm-6">
-                    <h2 class="section-subheading text-muted">Giornale di Sicilia</h2>
+                <div class="col-md-4 col-sm-6">
+                    <h4 class="section-subheading text-muted">Giornale di Sicilia</h4>
                     <img src="img/giornali/giornales.jpg" class="img-responsive img-centered" alt="">
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <h4 class="section-subheading text-muted">Zammu' Multimedia (Unict)</h4>
+                    <img src="img/giornali/uni.png" class="img-responsive img-centered" alt="">
                 </div>
             </div>
         </div>
@@ -936,7 +940,6 @@
                         <div class="modal-body">
                             <h2>FAQ</h2>
                             <p class="item-intro text-muted"></p>
-                            <p>
                             <p>
                                 <h3>Cosa sono Programmatori a Catania e YoutHub Catania?</h3>
                                 <br>
@@ -1015,7 +1018,7 @@
     <!-- Use the modals below to showcase details about your portfolio projects! -->
 
     <!-- Portfolio Modal 1 -->
-    <div class="portfolio-modal modal fade" id="keynote" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="portfolio-modal modal fade" id="keynote1" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
                 <div class="lr">
@@ -1028,13 +1031,39 @@
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
                             <h2>Keynote</h2>
-                            <p class="item-intro text-muted"></p>
+                            <p class="item-intro text-muted">Keynote e Ospiti di Prestigio!</p>
                             <img class="img-responsive img-centered" src="img/portfolio/keynote.jpg" alt="">
-                            <p>Stay tuned per la lista completa degli speakers!</p>
                             <ul class="list-inline">
                                 <li>Date: 02 Ottobre 2015</li>
-                                <li>Speaker: Stefano Gurciullo</li>
+                                <li>Keynote: Prof. Giovanni Bignami</li>
                             </ul>
+                            <p class="item-intro text-muted">Ma andate tutti fuori dalle scatole... !</p>
+                            <hr>
+                            <ul class="list-inline">
+                                <li>Date: 03 Ottobre 2015</li>
+                                <li>Keynote: Salvatore Sanfilippo (aka Antirez)</li>
+                            </ul>
+                            <p class="item-intro text-muted">Dall'Open Source alle Startups</p>
+                            <hr>
+                            <ul class="list-inline">
+                                <li>Date: 02 Ottobre 2015</li>  
+                                <li>Keynote: Dott.ssa Patrizia Caraveo</li>
+                            </ul>
+                            <p class="item-intro text-muted">La donna e la tecnologia</p>
+                            <p>
+                                Le donne hanno vita dura nella Silicon Valley dove rappresentano appena il 15% dei lavoratori.
+                                <br>
+                                Eppure Sheryl Sandberg, numero 2 di Facebook, sostiene che la presenza femminile nelle posizioni che contano ha effetti benefici sul profitto aziendale: i risultati migliorano e i guadagni crescono.  
+                                <br>
+                                Secondo Sheryl, men are more confident, women are more competent.
+                            </p>
+                            <hr>
+                            <ul class="list-inline">
+                                <li>Date: 02 Ottobre 2015</li>
+                                <li>Keynote: Aldo V. Pecora</li>
+                                <li>Social Innovation</li>
+                            </ul>
+                            <p class="item-intro text-muted">Social Innovation</p>
                             <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
@@ -1337,7 +1366,7 @@
                             <h2>Mini-Hackaton</h2>
                             <p class="item-intro text-muted">Show-off your skills.</p>
                             <img class="img-responsive img-centered" src="img/portfolio/hackaton.jpg" alt="">
-                            <p>Partecipa come individuo o in gruppo (max 3 persone) in una mini-hackaton di 6-7 ore.
+                            <p>Partecipa come individuo o in gruppo (max 3 persone) in una mini-hackaton di 3-4 ore.
                             Il tema dell'hackaton sara' reso pubblico nelle prossime settimane. 
                             Una giuria di esperti votera' i progetti migliori e piu' innovativi e riceveranno dei premi offerti dai nostri sponsors.</p>
                             <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
@@ -1359,30 +1388,22 @@
         $(document).ready(function () {
             var target = document.location.hash.replace("#", "");
             if (target.length) {
-                if(target=="faq"){
-                $('#faq').modal({
-                    show: true,
-                    remote: 'faq'
-                });
-                } else if(target="pitches") {
-                    $('#pitches').modal({
-                    show: true,
-                    remote: 'pitches'
-                });
-                } else if(target="news") {
-                    $('#news').modal({
-                    show: true,
-                    remote: 'news'
-                });
-                } else if(target="investor") {
-                    $('#investor').modal({
-                    show: true,
-                    remote: 'investor'
-                });
-                }
+                popup(target, 'faq');
+                popup(target, 'pitches');
+                popup(target, 'news');
+                popup(target, 'investor');
             }
             
         });
+         
+         function popup(target, id) {
+             if(target==id) {
+                    $('#'+id).modal({
+                    show: true,
+                    remote: id
+                });
+             }
+         }
     </script>
 
     <!-- Plugin JavaScript -->
